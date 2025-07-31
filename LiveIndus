@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveIndus Investor Pitch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #F8F4E3; /* Light sandy background */
+            color: #4A3027; /* Dark brown text */
+        }
+        .bg-ancient {
+            background-color: #DBC9AC; /* A light, warm, earthy tone */
+            background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><pattern id="patt" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 0 0 L 10 10" stroke="%23A86645" stroke-width="0.5"/><path d="M 10 0 L 0 10" stroke="%23A86645" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23patt)"/></svg>');
+            background-size: 15px 15px;
+            background-blend-mode: multiply;
+        }
+        .tab-button.active {
+            background-color: #C99A7B; /* Antique Brass */
+            color: #4A3027; /* Dark brown text */
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-ancient min-h-screen p-4">
+
+    <div class="max-w-4xl mx-auto my-8 p-6 bg-white shadow-xl rounded-lg border-2 border-gray-200">
+
+        <!-- Header -->
+        <header class="mb-8 text-center">
+            <h1 class="text-5xl font-bold text-[#4A3027] mb-2 tracking-wide">LiveIndus</h1>
+            <p class="text-xl italic text-gray-600">The Path to Clarity in a World of Noise</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="flex flex-wrap justify-center space-x-2 sm:space-x-4 mb-8 border-b-2 border-[#DBC9AC] pb-4">
+            <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027] active" onclick="openTab(event, 'Problem')">The Problem</button>
+            <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Solution')">The Solution</button>
+            <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Monetization')">Monetization</button>
+            <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Growth')">Path to 10x</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="Problem" class="tab-content">
+            <div class="prose max-w-none text-gray-800">
+                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">The Modern Predicament</h2>
+                <p class="text-lg leading-relaxed">
+                    We live in an age of unprecedented connectivity and information, yet many feel profoundly disconnected and overwhelmed. The data is clear: our society is grappling with an epidemic of stress, digital addiction, and a pervasive sense of purposelessness. We are constantly barraged with notifications, news, and social pressures that lead to information overload, anxiety, and a debilitating lack of concentration.
+                </p>
+                <ul class="list-disc list-inside mt-4 space-y-2 text-lg">
+                    <li><strong class="font-medium">Digital Addiction & Lack of Focus:</strong> Our attention spans are shrinking, leaving us unable to focus, hindering productivity and mental clarity.</li>
+                    <li><strong class="font-medium">Stress-Induced Burnout:</strong> The "always-on" culture is leading to chronic stress, poor sleep, and a feeling of being perpetually overwhelmed.</li>
+                    <li><strong class="font-medium">A Sense of Purposelessness:</strong> Despite endless access to information, many struggle to find meaning and purpose, feeling disconnected from their inner selves.</li>
+                </ul>
+                <p class="text-lg leading-relaxed mt-4">
+                    Existing solutions offer temporary relief—a generic meditation here, a productivity hack there. But they lack a holistic, integrated system for lasting change. They are band-aids, not a profound cure.
+                </p>
+            </div>
+        </div>
+
+        <div id="Solution" class="tab-content hidden">
+            <div class="prose max-w-none text-gray-800">
+                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">The LiveIndus Solution: A Holistic Antidote</h2>
+                <p class="text-lg leading-relaxed">
+                    LiveIndus is an AI-powered application that serves as a deeply personalized guide to an ancient Indian way of living, specifically rooted in the principles of Ashtanga Yoga. We don't just offer content; we offer a profound, transformative journey designed to build resilience and wisdom from within.
+                </p>
+                <h3 class="text-2xl font-semibold mt-6 mb-2 text-[#4A3027]">Key Differentiators:</h3>
+                <ul class="list-disc list-inside mt-4 space-y-3 text-lg">
+                    <li><strong class="font-medium">Deep Personalization through AI:</strong> Our journey begins with a comprehensive onboarding questionnaire covering a user's background, challenges, and thought process. A proprietary AI engine analyzes this data to create a dynamic "spiritual profile," tailoring every piece of content—from daily routines to philosophical insights—to the user's specific needs and struggles.</li>
+                    <li><strong class="font-medium">EQ-Driven AI Assessment:</strong> We go beyond surface-level wellness. Our AI continuously assesses and tracks a user's Emotional IQ (EQ) through in-app interactions and self-reported data. The app then provides personalized development paths to enhance emotional regulation, self-awareness, and empathy, offering tangible proof of transformation.</li>
+                    <li><strong class="font-medium">Authentic & Engaging Wisdom Delivery:</strong> We replace direct answers and fleeting content with the power of narrative. The AI chatbot, fine-tuned on authentic sources, engages users through ancient stories, powerful pictorial views, and memorable mnemonics to make profound philosophical concepts accessible and relevant to their modern lives.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="Monetization" class="tab-content hidden">
+            <div class="prose max-w-none text-gray-800">
+                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">Monetization: The GST Model</h2>
+                <p class="text-lg leading-relaxed">
+                    Our monetization strategy is built on a scalable and cohesive model of Goods, Services, and Transformational Experiences (GST), designed to convert users from our free trial into high-value customers.
+                </p>
+                <h3 class="text-2xl font-semibold mt-6 mb-2 text-[#4A3027]">Core Revenue Streams:</h3>
+                <ul class="list-disc list-inside mt-4 space-y-3 text-lg">
+                    <li><strong class="font-medium">Transformational Experiences (Highly Scalable):</strong> These are our primary revenue drivers. Our premium subscriptions offer access to AI-guided, multi-week digital journeys (e.g., "40-Day Path to Digital Nirvana"). These leverage our core AI to justify premium pricing and can scale infinitely.</li>
+                    <li><strong class="font-medium">Services (Strategically Scalable):</strong> We offer services that are built for growth. This includes live virtual workshops and group coaching sessions on specific topics, where a single expert can serve many. We will introduce ultra-premium, 1-to-1 human services in specific geographies, positioning them as an exclusive, high-margin offering.</li>
+                    <li><strong class="font-medium">Goods (Digitally Prioritized):</strong> We will start with a limited offering of physical goods (e.g., ethically sourced yoga mats, guided journals) to enhance brand identity and then scale this revenue through partnerships to minimize operational overhead. Our primary focus for goods will be on high-margin digital products like premium e-books and advanced audio series.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="Growth" class="tab-content hidden">
+            <div class="prose max-w-none text-gray-800">
+                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">The Path to 10x Growth</h2>
+                <p class="text-lg leading-relaxed">
+                    Our vision is to scale LiveIndus to millions of users, starting with a laser-focused plan to generate <strong class="font-bold text-[#C72A39]">$1 Million in revenue within the first 6 months.</strong> This is our path to achieving that ambitious goal, powered by a tiered pricing strategy for both the Indian and global markets.
+                </p>
+                <h3 class="text-2xl font-semibold mt-6 mb-2 text-[#4A3027]">Pricing Tiers:</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-4">
+                    <div class="p-6 bg-[#F09D22] bg-opacity-10 rounded-lg shadow-md border-2 border-[#F09D22]">
+                        <h4 class="text-2xl font-bold mb-2 text-[#4A3027]">LiveIndus India</h4>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li><strong>Essentials:</strong> ₹499/month or ₹4,999/year.</li>
+                            <li><strong>Transform:</strong> ₹999/month or ₹9,999/year.</li>
+                        </ul>
+                        <p class="text-sm mt-4 text-gray-700">A free 7-14 day trial provides full access to core features to drive high conversions in a price-sensitive market.</p>
+                    </div>
+                    <div class="p-6 bg-[#A86645] bg-opacity-10 rounded-lg shadow-md border-2 border-[#A86645]">
+                        <h4 class="text-2xl font-bold mb-2 text-[#4A3027]">LiveIndus Global</h4>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li><strong>Essentials:</strong> $9.99/month or $99.99/year.</li>
+                            <li><strong>Transform:</strong> $19.99/month or $199.99/year.</li>
+                        </ul>
+                        <p class="text-sm mt-4 text-gray-700">Premium pricing leverages our unique AI and cultural authenticity to capture higher ARPU in the global wellness market.</p>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mt-8 mb-2 text-[#4A3027]">Financial Roadmap:</h3>
+                <p class="text-lg leading-relaxed">
+                    To hit our <strong class="font-bold text-[#C72A39]">$1M revenue goal</strong>, our strategy hinges on an average ARPU of ~$20/month. This requires us to acquire approximately <strong>8,350 paying users per month</strong>. We plan to achieve this through a highly targeted marketing strategy and a viral product that drives a strong conversion rate from our free trial.
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    We believe our unique combination of AI personalization, authentic ancient wisdom, and a cohesive monetization model positions LiveIndus for not just success, but for a **10x growth trajectory** in the booming global wellness market.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Declare all variables
+            var i, tabContent, tabButtons;
+
+            // Get all elements with class="tab-content" and hide them
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tab-button" and remove the "active" class
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Set the default tab to be open on load
+        window.onload = function() {
+            document.getElementById("Problem").style.display = "block";
+            document.getElementsByClassName("tab-button")[0].className += " active";
+        };
+    </script>
+
+</body>
+</html>
