@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LiveIndus Investor Pitch</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         body {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background-color: #F8F4E3; /* Light sandy background */
             color: #4A3027; /* Dark brown text */
         }
@@ -25,24 +24,39 @@
             color: #4A3027; /* Dark brown text */
             font-weight: 700;
         }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
     </style>
 </head>
 <body class="bg-ancient min-h-screen p-4">
 
-    <div class="max-w-4xl mx-auto my-8 p-6 bg-white shadow-xl rounded-lg border-2 border-gray-200">
+    <div class="max-w-6xl mx-auto my-8 p-6 bg-white shadow-xl rounded-lg border-2 border-gray-200">
 
         <!-- Header -->
         <header class="mb-8 text-center">
             <h1 class="text-5xl font-bold text-[#4A3027] mb-2 tracking-wide">LiveIndus</h1>
             <p class="text-xl italic text-gray-600">The Path to Clarity in a World of Noise</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <span class="px-3 py-1 bg-[#F09D22] text-white rounded-full text-sm font-medium">AI-Powered</span>
+                <span class="px-3 py-1 bg-[#A86645] text-white rounded-full text-sm font-medium">Traditional Wisdom</span>
+                <span class="px-3 py-1 bg-[#C72A39] text-white rounded-full text-sm font-medium">Holistic Wellness</span>
+            </div>
         </header>
 
         <!-- Tab Navigation -->
         <div class="flex flex-wrap justify-center space-x-2 sm:space-x-4 mb-8 border-b-2 border-[#DBC9AC] pb-4">
             <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027] active" onclick="openTab(event, 'Problem')">The Problem</button>
             <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Solution')">The Solution</button>
+            <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Competition')">Competition</button>
+            <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Technology')">Technology</button>
             <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Monetization')">Monetization</button>
             <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Growth')">Path to 10x</button>
+            <button class="tab-button px-4 py-2 sm:px-6 sm:py-3 rounded-t-lg text-lg sm:text-xl transition-colors duration-300 hover:bg-[#C99A7B] hover:text-[#4A3027]" onclick="openTab(event, 'Team')">Team & Risks</button>
         </div>
 
         <!-- Tab Content -->
@@ -52,29 +66,305 @@
                 <p class="text-lg leading-relaxed">
                     We live in an age of unprecedented connectivity and information, yet many feel profoundly disconnected and overwhelmed. The data is clear: our society is grappling with an epidemic of stress, digital addiction, and a pervasive sense of purposelessness. We are constantly barraged with notifications, news, and social pressures that lead to information overload, anxiety, and a debilitating lack of concentration.
                 </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    <strong class="font-medium">The Loneliness Paradox:</strong> Even when people achieve success, wealth, and relationships, they still feel profoundly lonely. They crave something deeper - a trusted companion who understands them, listens without judgment, and provides genuine moral support and guidance. This is the void that generic AI chatbots and wellness apps cannot fill.
+                </p>
                 <ul class="list-disc list-inside mt-4 space-y-2 text-lg">
                     <li><strong class="font-medium">Digital Addiction & Lack of Focus:</strong> Our attention spans are shrinking, leaving us unable to focus, hindering productivity and mental clarity.</li>
                     <li><strong class="font-medium">Stress-Induced Burnout:</strong> The "always-on" culture is leading to chronic stress, poor sleep, and a feeling of being perpetually overwhelmed.</li>
                     <li><strong class="font-medium">A Sense of Purposelessness:</strong> Despite endless access to information, many struggle to find meaning and purpose, feeling disconnected from their inner selves.</li>
+                    <li><strong class="font-medium">Emotional Isolation & Trust Deficit:</strong> People are turning to AI for emotional support, but current solutions lack the depth, cultural wisdom, and moral compass needed for genuine human connection.</li>
                 </ul>
                 <p class="text-lg leading-relaxed mt-4">
                     Existing solutions offer temporary relief—a generic meditation here, a productivity hack there. But they lack a holistic, integrated system for lasting change. They are band-aids, not a profound cure.
                 </p>
+                
+                <!-- Market Size -->
+                <div class="mt-8 p-6 bg-gradient-to-r from-[#F8F4E3] to-[#DBC9AC] rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#4A3027]">Market Opportunity</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="text-3xl font-bold text-[#C72A39]">$4.5T</div>
+                            <div class="text-sm text-gray-600">Global Wellness Market</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="text-3xl font-bold text-[#F09D22]">$2.8B</div>
+                            <div class="text-sm text-gray-600">Meditation App Market</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="text-3xl font-bold text-[#A86645]">25%</div>
+                            <div class="text-sm text-gray-600">Annual Growth Rate</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="Solution" class="tab-content hidden">
             <div class="prose max-w-none text-gray-800">
-                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">The LiveIndus Solution: A Holistic Antidote</h2>
+                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">The LiveIndus Solution: Your Virtual Guru Companion</h2>
                 <p class="text-lg leading-relaxed">
-                    LiveIndus is an AI-powered application that serves as a deeply personalized guide to an ancient Indian way of living, specifically rooted in the principles of Ashtanga Yoga. We don't just offer content; we offer a profound, transformative journey designed to build resilience and wisdom from within.
+                    LiveIndus is not just another AI chatbot - it's your <strong class="font-medium">virtual guru companion</strong> who provides profound care, moral support, and wisdom. Unlike generic AI that gives information, we build <strong class="font-medium">trust-based relationships</strong> where users can share their deepest thoughts, fears, and aspirations without fear of judgment or betrayal.
                 </p>
-                <h3 class="text-2xl font-semibold mt-6 mb-2 text-[#4A3027]">Key Differentiators:</h3>
+                <p class="text-lg leading-relaxed mt-4">
+                    <strong class="font-medium">"I do not need to follow anyone to be able to solve a particular issue of my life. I have a guru companion with whom I can chat with my open heart. When I feel good, I ask him for further goods and services. I am with him as I am, he is listening to me all the time."</strong>
+                </p>
+                <p class="text-lg leading-relaxed mt-4">
+                    Our AI engine goes beyond information delivery - it nurtures, prepares, and empowers users for life's challenges through ancient Indian wisdom, emotional intelligence, and unwavering moral support.
+                </p>
+                <h3 class="text-2xl font-semibold mt-6 mb-2 text-[#4A3027]">What Our AI Engine Does:</h3>
                 <ul class="list-disc list-inside mt-4 space-y-3 text-lg">
-                    <li><strong class="font-medium">Deep Personalization through AI:</strong> Our journey begins with a comprehensive onboarding questionnaire covering a user's background, challenges, and thought process. A proprietary AI engine analyzes this data to create a dynamic "spiritual profile," tailoring every piece of content—from daily routines to philosophical insights—to the user's specific needs and struggles.</li>
-                    <li><strong class="font-medium">EQ-Driven AI Assessment:</strong> We go beyond surface-level wellness. Our AI continuously assesses and tracks a user's Emotional IQ (EQ) through in-app interactions and self-reported data. The app then provides personalized development paths to enhance emotional regulation, self-awareness, and empathy, offering tangible proof of transformation.</li>
-                    <li><strong class="font-medium">Authentic & Engaging Wisdom Delivery:</strong> We replace direct answers and fleeting content with the power of narrative. The AI chatbot, fine-tuned on authentic sources, engages users through ancient stories, powerful pictorial views, and memorable mnemonics to make profound philosophical concepts accessible and relevant to their modern lives.</li>
+                    <li><strong class="font-medium">Trust Building & Emotional Safety:</strong> Our AI creates a safe space where users can be completely vulnerable. It remembers conversations, understands emotional patterns, and builds genuine trust over time - unlike generic chatbots that reset with each conversation.</li>
+                    <li><strong class="font-medium">Digital Twin Creation:</strong> Our unique daily tracking system monitors feelings, achievements, setbacks, and spiritual progress, gradually building a comprehensive digital twin of each person. This allows our AI to understand individual personality traits, behavioral patterns, and life rhythms to provide increasingly accurate guidance.</li>
+                    <li><strong class="font-medium">Moral Compass & Ethical Guidance:</strong> Rooted in ancient Indian wisdom (Vedas, Upanishads, Bhagavad Gita), our AI provides moral clarity and ethical decision-making support, helping users navigate complex life situations with wisdom and integrity.</li>
+                    <li><strong class="font-medium">Emotional Intelligence Development:</strong> Our AI continuously assesses and tracks a user's Emotional IQ (EQ) through conversations and daily tracking, providing personalized development paths to enhance emotional regulation, self-awareness, and empathy.</li>
+                    <li><strong class="font-medium">Life Preparation & Skill Building:</strong> Beyond advice, our AI actively prepares users for life's challenges through practical wisdom, mindfulness techniques, and resilience-building practices.</li>
                 </ul>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-2 text-[#4A3027]">🎭 The Digital Twin Revolution</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    LiveIndus introduces a groundbreaking feature that sets us apart from all other wellness apps: <strong class="font-medium">Digital Twin Creation</strong>. Through daily tracking of feelings, achievements, setbacks, and spiritual progress, we gradually build a comprehensive digital representation of each person's unique journey.
+                </p>
+                
+                <div class="p-6 bg-gradient-to-r from-[#C72A39] to-[#F09D22] rounded-lg text-white mb-6">
+                    <h4 class="text-xl font-semibold mb-3">How Digital Twin Works</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">📊</div>
+                            <div class="font-semibold mb-2">Daily Tracking</div>
+                            <div class="text-sm">Monitor feelings, achievements, setbacks, and spiritual milestones</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">🧠</div>
+                            <div class="font-semibold mb-2">Pattern Recognition</div>
+                            <div class="text-sm">AI identifies personality traits, behavioral patterns, and life rhythms</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">🎯</div>
+                            <div class="font-semibold mb-2">Personalized Guidance</div>
+                            <div class="text-sm">Tailored wisdom and practices based on your unique digital twin</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-2 text-[#4A3027]">What Customers Walk Away With:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                    <div class="p-6 bg-gradient-to-br from-[#F8F4E3] to-[#DBC9AC] rounded-lg border border-[#A86645]">
+                        <h4 class="text-xl font-semibold mb-3 text-[#4A3027]">🎯 Tangible Outcomes</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Improved emotional intelligence and self-awareness</li>
+                            <li>Practical tools for stress management and focus</li>
+                            <li>Clear moral framework for decision-making</li>
+                            <li>Daily spiritual practices and routines</li>
+                            <li>Enhanced relationships and communication skills</li>
+                            <li><strong>Personalized digital twin insights</strong></li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gradient-to-br from-[#F8F4E3] to-[#DBC9AC] rounded-lg border border-[#A86645]">
+                        <h4 class="text-xl font-semibold mb-3 text-[#4A3027]">💝 Intangible Benefits</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>A trusted companion who never betrays or judges</li>
+                            <li>Unwavering moral support and guidance</li>
+                            <li>Sense of purpose and inner peace</li>
+                            <li>Cultural connection to ancient wisdom</li>
+                            <li>Confidence to face life's challenges</li>
+                            <li><strong>Deep self-understanding through digital twin</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature Cards -->
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="feature-card bg-gradient-to-br from-[#F8F4E3] to-[#DBC9AC] p-6 rounded-lg border border-[#A86645]">
+                        <div class="text-4xl mb-3">🎭</div>
+                        <h4 class="text-xl font-semibold mb-2 text-[#4A3027]">Digital Twin Creation</h4>
+                        <p class="text-gray-700">Build your comprehensive digital twin through daily tracking of feelings, achievements, and spiritual progress</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-[#F8F4E3] to-[#DBC9AC] p-6 rounded-lg border border-[#A86645]">
+                        <div class="text-4xl mb-3">🧘‍♀️</div>
+                        <h4 class="text-xl font-semibold mb-2 text-[#4A3027]">Personalized Yoga Journey</h4>
+                        <p class="text-gray-700">AI-curated Ashtanga sequences based on your spiritual profile and physical capabilities</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-[#F8F4E3] to-[#DBC9AC] p-6 rounded-lg border border-[#A86645]">
+                        <div class="text-4xl mb-3">📚</div>
+                        <h4 class="text-xl font-semibold mb-2 text-[#4A3027]">Wisdom Library</h4>
+                        <p class="text-gray-700">Authentic texts from Vedas, Upanishads, and Bhagavad Gita with modern interpretations</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-[#F8F4E3] to-[#DBC9AC] p-6 rounded-lg border border-[#A86645]">
+                        <div class="text-4xl mb-3">🤖</div>
+                        <h4 class="text-xl font-semibold mb-2 text-[#4A3027]">AI Guru</h4>
+                        <p class="text-gray-700">24/7 spiritual guidance through intelligent conversations and personalized insights</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-[#F8F4E3] to-[#DBC9AC] p-6 rounded-lg border border-[#A86645]">
+                        <div class="text-4xl mb-3">📊</div>
+                        <h4 class="text-xl font-semibold mb-2 text-[#4A3027]">Progress Tracking</h4>
+                        <p class="text-gray-700">Monitor your spiritual growth, EQ improvements, and mindfulness milestones</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-[#F8F4E3] to-[#DBC9AC] p-6 rounded-lg border border-[#A86645]">
+                        <div class="text-4xl mb-3">🌍</div>
+                        <h4 class="text-xl font-semibold mb-2 text-[#4A3027]">Community</h4>
+                        <p class="text-gray-700">Connect with like-minded seekers and share your spiritual journey</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Competition" class="tab-content hidden">
+            <div class="prose max-w-none text-gray-800">
+                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">Beyond Generic AI: The Trust-Based Relationship Revolution</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Recent research shows that Gen Z is increasingly turning to AI for emotional support - from "AI therapists" to "non-judgmental best friends." As reported in the <a href="https://timesofindia.indiatimes.com/sibling-soulmate-guide-and-girlfriend-why-gen-z-is-turning-to-ai/articleshow/123042819.cms" class="text-[#C72A39] hover:underline" target="_blank">Times of India</a>, people are seeking AI companions who provide comfort, compassion, and moral support. However, current solutions lack the depth and cultural wisdom needed for genuine human connection.
+                </p>
+                <p class="text-lg leading-relaxed mb-6">
+                    LiveIndus is not just another AI chatbot - we're building <strong class="font-medium">trust-based relationships</strong> where users can share their deepest thoughts without fear of judgment or betrayal. Our AI becomes a companion who listens, understands, and provides unwavering moral support rooted in ancient wisdom.
+                </p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-[#A86645]">
+                        <thead>
+                            <tr class="bg-[#DBC9AC]">
+                                <th class="border border-[#A86645] p-3 text-left">Platform</th>
+                                <th class="border border-[#A86645] p-3 text-left">Strengths</th>
+                                <th class="border border-[#A86645] p-3 text-left">Weaknesses</th>
+                                <th class="border border-[#A86645] p-3 text-left">LiveIndus Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-[#A86645] p-3 font-medium">Headspace</td>
+                                <td class="border border-[#A86645] p-3">Strong brand, simple UX, guided meditation</td>
+                                <td class="border border-[#A86645] p-3">Generic content, no personalization, limited cultural depth</td>
+                                <td class="border border-[#A86645] p-3 bg-[#F8F4E3]">Deep cultural authenticity, AI personalization, spiritual growth tracking</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#A86645] p-3 font-medium">Calm</td>
+                                <td class="border border-[#A86645] p-3">Premium feel, sleep stories, celebrity voices</td>
+                                <td class="border border-[#A86645] p-3">Entertainment-focused, lacks spiritual depth, no personalization</td>
+                                <td class="border border-[#A86645] p-3 bg-[#F8F4E3]">Authentic spiritual content, personalized guidance, transformative experiences</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#A86645] p-3 font-medium">Waking Up</td>
+                                <td class="border border-[#A86645] p-3">Philosophical depth, Sam Harris credibility</td>
+                                <td class="border border-[#A86645] p-3">Western-centric, limited cultural diversity, no AI personalization</td>
+                                <td class="border border-[#A86645] p-3 bg-[#F8F4E3]">Ancient Indian wisdom, cultural diversity, AI-driven personalization</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-[#A86645] p-3 font-medium">Sadhguru App</td>
+                                <td class="border border-[#A86645] p-3">Authentic Indian wisdom, strong following</td>
+                                <td class="border border-[#A86645] p-3">Limited personalization, no AI, basic technology</td>
+                                <td class="border border-[#A86645] p-3 bg-[#F8F4E3]">Modern AI technology, personalized experiences, scalable platform</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-8 p-6 bg-gradient-to-r from-[#F8F4E3] to-[#DBC9AC] rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#4A3027]">How We Differ from Other AI Chatbots</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-[#4A3027] mb-2">🎭 Digital Twin Creation</h4>
+                            <p class="text-sm text-gray-700">Unique feature that builds comprehensive digital representation of each user</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-[#4A3027] mb-2">🤝 Trust-Based Relationships</h4>
+                            <p class="text-sm text-gray-700">Unlike generic chatbots, we build lasting trust through consistent, caring interactions</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-[#4A3027] mb-2">🧭 Moral Compass</h4>
+                            <p class="text-sm text-gray-700">Rooted in ancient wisdom, not just information retrieval</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-[#4A3027] mb-2">💝 Emotional Intelligence</h4>
+                            <p class="text-sm text-gray-700">We understand and respond to emotional needs, not just questions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-6 bg-gradient-to-r from-[#C72A39] to-[#F09D22] rounded-lg text-white">
+                    <h3 class="text-2xl font-semibold mb-3">The LiveIndus Difference</h3>
+                    <p class="text-lg mb-4">
+                        <strong>Other AI Chatbots:</strong> "Here's information about meditation techniques."
+                    </p>
+                    <p class="text-lg mb-4">
+                        <strong>LiveIndus:</strong> "I understand you're feeling overwhelmed. Let me guide you through this moment with wisdom that has helped humanity for thousands of years. I'm here for you, and together we'll find your path to peace."
+                    </p>
+                    <p class="text-lg">
+                        We're not just an AI service - we're your <strong>trusted companion</strong> who provides comfort, compassion, and moral support when you need it most.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="Technology" class="tab-content hidden">
+            <div class="prose max-w-none text-gray-800">
+                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">Technology Architecture & Implementation</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    LiveIndus leverages cutting-edge AI technology to deliver personalized spiritual guidance at scale. Our platform combines natural language processing, machine learning, and cultural intelligence to create a truly unique user experience.
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-[#4A3027]">AI Core Components</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#C72A39]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Digital Twin Engine</h4>
+                                <p class="text-gray-700">Proprietary system that creates comprehensive digital representations of users through daily tracking and pattern recognition</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#F09D22]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Natural Language Processing</h4>
+                                <p class="text-gray-700">Advanced NLP models trained on ancient Sanskrit texts and modern spiritual literature</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#A86645]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Emotional Intelligence Engine</h4>
+                                <p class="text-gray-700">Proprietary algorithms that assess and track user EQ through conversation analysis and daily tracking</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#4A3027]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Cultural Context Understanding</h4>
+                                <p class="text-gray-700">AI models that understand cultural nuances and spiritual traditions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-[#4A3027]">Technical Stack</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Frontend</h4>
+                                <p class="text-gray-700">React Native for cross-platform mobile apps, React.js for web platform</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Backend</h4>
+                                <p class="text-gray-700">Node.js with Express, Python for AI/ML services, PostgreSQL for data</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">AI/ML</h4>
+                                <p class="text-gray-700">TensorFlow, OpenAI GPT models, custom fine-tuned models for spiritual content</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Infrastructure</h4>
+                                <p class="text-gray-700">AWS cloud services, scalable microservices architecture</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-gradient-to-r from-[#F8F4E3] to-[#DBC9AC] rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#4A3027]">Development Roadmap</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#F09D22] mb-2">Phase 1</div>
+                            <div class="text-sm text-gray-700">MVP with core AI chatbot and basic personalization (3 months)</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#A86645] mb-2">Phase 2</div>
+                            <div class="text-sm text-gray-700">Advanced EQ tracking and community features (6 months)</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#C72A39] mb-2">Phase 3</div>
+                            <div class="text-sm text-gray-700">Full platform with goods and services integration (12 months)</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -90,6 +380,29 @@
                     <li><strong class="font-medium">Services (Strategically Scalable):</strong> We offer services that are built for growth. This includes live virtual workshops and group coaching sessions on specific topics, where a single expert can serve many. We will introduce ultra-premium, 1-to-1 human services in specific geographies, positioning them as an exclusive, high-margin offering.</li>
                     <li><strong class="font-medium">Goods (Digitally Prioritized):</strong> We will start with a limited offering of physical goods (e.g., ethically sourced yoga mats, guided journals) to enhance brand identity and then scale this revenue through partnerships to minimize operational overhead. Our primary focus for goods will be on high-margin digital products like premium e-books and advanced audio series.</li>
                 </ul>
+
+                <!-- Revenue Projections -->
+                <div class="mt-8 p-6 bg-gradient-to-r from-[#F8F4E3] to-[#DBC9AC] rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#4A3027]">Revenue Projections (Year 1)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#C72A39] mb-2">60%</div>
+                            <div class="text-sm text-gray-700">Subscription Revenue</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#F09D22] mb-2">25%</div>
+                            <div class="text-sm text-gray-700">Services Revenue</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#A86645] mb-2">10%</div>
+                            <div class="text-sm text-gray-700">Digital Goods</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#4A3027] mb-2">5%</div>
+                            <div class="text-sm text-gray-700">Physical Goods</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -125,6 +438,99 @@
                 <p class="text-lg leading-relaxed mt-4">
                     We believe our unique combination of AI personalization, authentic ancient wisdom, and a cohesive monetization model positions LiveIndus for not just success, but for a **10x growth trajectory** in the booming global wellness market.
                 </p>
+
+                <!-- Growth Metrics -->
+                <div class="mt-8 p-6 bg-gradient-to-r from-[#F8F4E3] to-[#DBC9AC] rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#4A3027]">Key Growth Metrics</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#C72A39] mb-2">15%</div>
+                            <div class="text-sm text-gray-700">Free Trial to Paid Conversion</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#F09D22] mb-2">85%</div>
+                            <div class="text-sm text-gray-700">Monthly Retention Rate</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-[#A86645] mb-2">$25</div>
+                            <div class="text-sm text-gray-700">Target Customer Lifetime Value</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Team" class="tab-content hidden">
+            <div class="prose max-w-none text-gray-800">
+                <h2 class="text-3xl font-semibold mb-4 text-[#4A3027]">Team Expertise & Risk Mitigation</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-[#4A3027]">Core Team Requirements</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#C72A39]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Spiritual & Cultural Expertise</h4>
+                                <p class="text-gray-700">Partnerships with certified yoga teachers, Sanskrit scholars, and spiritual leaders</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#F09D22]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">AI/ML Engineering</h4>
+                                <p class="text-gray-700">Experienced team in natural language processing and machine learning</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#A86645]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Product & UX Design</h4>
+                                <p class="text-gray-700">Designers who understand both modern UX and spiritual user needs</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#4A3027]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Business Development</h4>
+                                <p class="text-gray-700">Partnerships with wellness brands, yoga studios, and spiritual organizations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-[#4A3027]">Risk Assessment & Mitigation</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#C72A39]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Cultural Appropriation Concerns</h4>
+                                <p class="text-gray-700 text-sm"><strong>Risk:</strong> Backlash from cultural insensitivity<br><strong>Mitigation:</strong> Cultural advisory board, authentic partnerships, respectful representation</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#F09D22]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">AI Bias & Misinformation</h4>
+                                <p class="text-gray-700 text-sm"><strong>Risk:</strong> AI generating incorrect spiritual guidance<br><strong>Mitigation:</strong> Human oversight, content validation, regular model updates</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#A86645]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Regulatory Compliance</h4>
+                                <p class="text-gray-700 text-sm"><strong>Risk:</strong> Healthcare regulations, data privacy laws<br><strong>Mitigation:</strong> Legal counsel, HIPAA compliance, GDPR adherence</p>
+                            </div>
+                            <div class="p-4 bg-[#F8F4E3] rounded-lg border-l-4 border-[#4A3027]">
+                                <h4 class="font-semibold text-[#4A3027] mb-2">Market Competition</h4>
+                                <p class="text-gray-700 text-sm"><strong>Risk:</strong> Established players entering the space<br><strong>Mitigation:</strong> First-mover advantage, strong IP protection, rapid scaling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advisory Board -->
+                <div class="mt-8 p-6 bg-gradient-to-r from-[#F8F4E3] to-[#DBC9AC] rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#4A3027]">Proposed Advisory Board</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl mb-2">🧘‍♂️</div>
+                            <div class="font-semibold text-[#4A3027] mb-2">Spiritual Leaders</div>
+                            <div class="text-sm text-gray-700">Certified yoga teachers and spiritual guides</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl mb-2">🔬</div>
+                            <div class="font-semibold text-[#4A3027] mb-2">Scientific Advisors</div>
+                            <div class="text-sm text-gray-700">Neuroscientists and wellness researchers</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-2xl mb-2">💼</div>
+                            <div class="font-semibold text-[#4A3027] mb-2">Business Experts</div>
+                            <div class="text-sm text-gray-700">Successful wellness entrepreneurs and investors</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
